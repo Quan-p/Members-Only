@@ -1,7 +1,10 @@
-doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.sass')
+    link(rel='stylesheet', href='/stylesheets/style.scss')
   body
-    block content
+    .container 
+      nav.navbar 
+        a(href='/').title
+          h3 Homepage
+      block content
