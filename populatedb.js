@@ -35,8 +35,9 @@ function userCreate(username, password, member, admin, cb) {
   });
 }
 
-function messageCreate(title, text, timestamp, cb) {
+function messageCreate(user, title, text, timestamp, cb) {
   const someMessage = {
+    user: user,
     title: title,
     text: text,
     timestamp: timestamp
@@ -65,16 +66,16 @@ function createUsers(cb) {
 function createMessages(cb) {
   async.series([
     function(callback) {
-      messageCreate("My name is Giorno Giovanna", "I have a dream!", Date.now(), callback);
+      messageCreate(users[0], "My name is Giorno Giovanna", "I have a dream!", Date.now(), callback);
     },
     function(callback) {
-      messageCreate("I'm Guido Mista", "Numbaaa 5!!", Date.now(), callback);
+      messageCreate(users[1], "I'm Guido Mista", "Numbaaa 5!!", Date.now(), callback);
     },
   ], cb);
 }
 
 async.series([
-  //createUsers,
+  createUsers,
   createMessages,
 ], (err, results) => {
   if (err) { 
