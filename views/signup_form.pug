@@ -6,6 +6,8 @@ block content
         div 
             label(for='username') Username:
             input#username.signup-input(type='text' name='username' required='true' maxLength='25')
+            if (error) 
+                p.error-message #{error}
         div 
             label(for='password') Password:
             input#password.signup-input(type='password' name='password' required='true')
