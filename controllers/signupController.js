@@ -35,7 +35,10 @@ exports.signup_post = [
 
             const user = new User({
                 username: req.body.username,
-                password: hashedPassword
+                password: hashedPassword,
+                member: false,
+                admin: false,
+                avatar: req.body.avatar
             }).save(err => err ? next(err) : res.redirect("/"));
             });
             // if err, do something
