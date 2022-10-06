@@ -16,13 +16,23 @@ exports.signup_post = [
         .trim()
         .isLength({ min: 1 })
         .escape()
-        .withMessage('Username must be at least 6 characters'),
-        
+        .withMessage('Password must be between 4 to 16 characters'),
+    body('confirmPassword')
+        .trim()
+        .isLength({ min: 1 })
+        .escape()
+        .custom(async (value, { req }) => {
+            const password = req.body.password;
+            if(password !== value) {
+                throw new Error('Passwords do not match');
+            }
+            
+        }),    
     async (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-          console.log("ERROR!");
-          return res.render("signup_form", { title: "Sign Up", passwordConfirmationError: "Passwords must be the same" });
+          console.log(errors);
+          return res.render("signup_form", { title: "Sign Up Form", passwordCompareError: "Passwords must be the same" });
         } 
 
         try {
