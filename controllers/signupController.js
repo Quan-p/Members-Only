@@ -3,7 +3,7 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 
 exports.signup_get = (req, res, next) => {
-    res.render('signup-form', { title: "Sign Up Form"});
+    res.render('signup_form', { title: "Sign Up Form"});
 };
 
 exports.signup_post = [
@@ -26,6 +26,10 @@ exports.signup_post = [
         } 
 
         try {
+            const doesUserExist = await User.find({ 'username': req.body.username });
+            if(doesUserExist.length > 0) {
+                return res.render('signup_form', { title: 'Sign Up', error: 'Username already taken' });
+            }
             bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
             if (err) return next(err);
 
