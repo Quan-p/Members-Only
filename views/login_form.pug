@@ -1,5 +1,17 @@
 extends layout 
 
 block content 
+    form.login-form(action='/login' method='POST')
+        h1= title 
+        div 
+            label(for='username') Username: 
+            input#username.login-input(type='text' name='username' required='true')
+        div 
+            label(for='password') Password: 
+            input#password.login-input(type='password' name='password' required='true')
+        button(type='submit') Login
+        
+        p Don't have an account? #[a(href='/sign-up') Sign Up]
 
-    h1= Title
+    if(errors)
+        p #{errors}
