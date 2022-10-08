@@ -13,4 +13,9 @@ html
           h3 Login
         a(href='/create-message').title
           h3 Message
-      block content
+        a(href='/logout').title
+          h3 Log Out 
+          
+    if user 
+      div #{user.username}
+    block content
