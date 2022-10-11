@@ -15,7 +15,10 @@ html
           h3 Message
         a(href='/logout').title
           h3 Log Out 
-          
-    if user 
-      div #{user.username}
+        if locals.currentUser  
+          a(href='/member').title
+            h3 Become a Member
+          a(href='/admin').title  
+            h3 Become an Admin
+    
     block content
