@@ -23,4 +23,7 @@ router.post('/create-message', messageController.create_message_post);
 router.get('/member', privilegeController.member_get);
 router.post('/member', privilegeController.member_post);
 
+router.get('/admin', privilegeController.admin_get);
+router.post('/admin', privilegeController.admin_post);
+
 module.exports = router;
