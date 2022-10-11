@@ -4,6 +4,7 @@ const router = express.Router();
 const signupController = require('../controllers/signupController');
 const loginController = require('../controllers/loginController');
 const messageController = require('../controllers/messageController');
+const privilegeController = require('../controllers/privilegeController');
 
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Homepage' });
@@ -18,5 +19,8 @@ router.get('/logout', loginController.logout_get);
 
 router.get('/create-message', messageController.create_message_get);
 router.post('/create-message', messageController.create_message_post);
+
+router.get('/member', privilegeController.member_get);
+router.post('/member', privilegeController.member_post);
 
 module.exports = router;
