@@ -11,14 +11,14 @@ html
           h3 Sign Up
         a(href='/login').title
           h3 Login
-        a(href='/create-message').title
-          h3 Message
-        a(href='/logout').title
-          h3 Log Out 
-        if locals.currentUser  
+        
+        if locals.currentUser 
+          a(href='/create-message').title
+            h3 Message
           a(href='/member').title
             h3 Become a Member
           a(href='/admin').title  
             h3 Become an Admin
-    
+          a(href='/logout').title
+                h3 Log Out 
     block content
