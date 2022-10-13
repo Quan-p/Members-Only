@@ -33,6 +33,24 @@ exports.admin_get = (req, res, next) => {
     res.render('admin_form', { title: 'Admin Form', user: res.locals.currentUser});
 }
 
-exports.admin_post = (req, res, next) => {
-    res.render('admin_form');
-}
+exports.admin_post = [
+    body('adminCode').trim().isLength({ min: 1 }).escape().withMessage('Password must be specified'),
+
+    async(req, res, next) => {
+        const errors = validationResult(req);
+        if(!errors.isEmpty()) {
+            return res.render('admin_form', { title: 'Admin Form', user: res.locals.currentUser, errors: errors.array() });
+        } else if (req.body.adminCode != process.env.ADMIN_PASSCODE) {
+            return res.render('admin_form', { title: 'Admin Form', user: res.locals.currentUser, passwordError: 'Incorrect Password' });
+        }
+
+        const updateUser = await User.findOne(res.locals.currentUser);
+        updateUser.admin = true;
+
+        await updateUser.save(err => {
+            if(err) return next(err);
+            console.log(updateUser);
+            res.redirect('/admin');
+        });
+    }
+]

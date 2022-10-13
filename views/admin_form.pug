@@ -2,7 +2,7 @@ extends layout
 
 block content 
     if(!user.admin)
-        form.member-form(action='/member' method='POST')
+        form.member-form(action='/admin' method='POST')
             h1= title
             div Enter the correct password to become an admin!
             div 
