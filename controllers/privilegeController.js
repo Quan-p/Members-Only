@@ -30,7 +30,7 @@ exports.member_post = [
  
 // Admin 
 exports.admin_get = (req, res, next) => {
-    res.render('admin_form');
+    res.render('admin_form', { title: 'Admin Form', user: res.locals.currentUser});
 }
 
 exports.admin_post = (req, res, next) => {

@@ -1,4 +1,16 @@
 extends layout 
 
 block content 
-    div Admin Form
+    if(!user.admin)
+        form.member-form(action='/member' method='POST')
+            h1= title
+            div Enter the correct password to become an admin!
+            div 
+                label(for='adminCode') Admin Password:
+                input#adminCode(type='password' name='adminCode' required='true')
+                if (passwordError) 
+                    p.error-message #{passwordError}
+            button(type='submit') Submit Password
+    
+    else 
+        h3 Congratulations you are an admin!
