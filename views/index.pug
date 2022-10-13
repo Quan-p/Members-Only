@@ -6,7 +6,7 @@ block content
     div Welcome #{locals.currentUser.username}
   else 
     p nope
-  
-  div.message-container 
-    each message in messages
-      div= message.title
+  if messages
+    div.message-container 
+      each message in messages
+        div= message.title
