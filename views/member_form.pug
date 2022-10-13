@@ -1,4 +1,16 @@
 extends layout 
 
 block content 
-    div Member form
+    if(!user.member)
+        form.member-form(action='/member' method='POST')
+            h1= title
+            div Enter the correct password to become a member!
+            div 
+                label(for='member-code') Member Password:
+                input#member-code(type='text' name='member-code' required='true')
+                if (codeError) 
+                    p.error-message #{codeError}
+            button(type='submit') Submit Password
+    
+    else 
+        h3 Congratulations you are a member!

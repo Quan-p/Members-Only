@@ -2,7 +2,7 @@ const User = require('../models/userModel');
 
 // Member
 exports.member_get = (req, res, next) => {
-    res.render('member_form');
+    res.render('member_form', { title: 'Member Form', user: res.locals.currentUser});
 }
 
 exports.member_post = (req, res, next) => {
