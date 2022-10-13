@@ -6,10 +6,10 @@ block content
             h1= title
             div Enter the correct password to become a member!
             div 
-                label(for='member-code') Member Password:
-                input#member-code(type='text' name='member-code' required='true')
-                if (codeError) 
-                    p.error-message #{codeError}
+                label(for='memberCode') Member Password:
+                input#memberCode(type='text' name='memberCode' required='true')
+                if (passwordError) 
+                    p.error-message #{passwordError}
             button(type='submit') Submit Password
     
     else 
