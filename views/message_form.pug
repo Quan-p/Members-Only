@@ -3,3 +3,13 @@ extends layout
 block content 
     form(action='/create-message' method='POST')
         h1= title
+        div.title-container 
+            label(for='messageTitle') Title: 
+            input#messageTitle(type='text' name='messageTitle' required='true' maxLength='100')
+        div.text-container
+            label(for='textInput') Message: 
+            input#textInput(type='text' name='textInput' required='true')
+        button(type='submit') Post Message 
+
+    if(errors) 
+        p #{errors}
