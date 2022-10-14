@@ -3,13 +3,19 @@ extends layout
 
 block content
   if locals.currentUser 
-    div Welcome #{locals.currentUser.username}
+    div Welcome #{user.username}
   else 
-    p nope
+    p Become a member to see users and dates.
+
   if messages
     div.message-container 
       each message in messages
-        h4= message.user.username
         div= message.title
         div= message.text
-        div= message.date_formatted
+        if user && user.member
+          h4= message.user.username
+          div= message.date_formatted
+        else 
+          h4 Anonymous 
+          div Date: N/A
+
