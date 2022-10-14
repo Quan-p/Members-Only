@@ -9,7 +9,7 @@ const MessageSchema = new Schema({
     timestamp: { type: Date, default: Date.now, required: true }
 });
   
-MessageSchema.virtual("date").get(function() {
+MessageSchema.virtual("date_formatted").get(function() {
     return DateTime.fromJSDate(this.timestamp).toLocaleString(DateTime.DATE_MED);
 });
   
