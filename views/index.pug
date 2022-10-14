@@ -9,4 +9,7 @@ block content
   if messages
     div.message-container 
       each message in messages
+        h4= message.user.username
         div= message.title
+        div= message.text
+        div= message.timestamp
