@@ -8,6 +8,7 @@ const messageController = require('../controllers/messageController');
 const privilegeController = require('../controllers/privilegeController');
 
 router.get('/', indexController.index);
+router.post('/', indexController.delete_message_post);
 
 router.get('/sign-up', signupController.signup_get);
 router.post('/sign-up', signupController.signup_post);
