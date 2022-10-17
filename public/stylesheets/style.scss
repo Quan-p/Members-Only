@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid gray; 
+  font-size: 20px;
+  color: #353535;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+a:visited, a:link, a:active {
+  text-decoration: none;
+  color: #353535;
+}
+
+.navlink:hover {
+  color: grey;
 }
 
 svg {
@@ -24,24 +42,18 @@ svg:hover {
   padding: 20px 0 20px 0;
 }
 
-a {
-  transition: all 0.2s ease;
-}
-
-a:visited, a:link, a:active {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: grey;
-}
-
 .right-container {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-  .title {
-    padding: 5px 10px;
-  }
+.navList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navList li {
+  padding: 0 10px 0 10px;
 }

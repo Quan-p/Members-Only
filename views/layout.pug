@@ -5,22 +5,24 @@ html
   body 
     nav.navbar 
       div.left-container
-        a(href='/').title
+        a(href='/').navlink
           svg(width='30px', height='30px')
             use(xlink:href='../images/home.svg#homeIcon')
       div.right-container
         if locals.currentUser 
-          a(href='/create-message').title
-            h3 Message
-          a(href='/member').title
-            h3 Become a Member
-          a(href='/admin').title  
-            h3 Become an Admin
-          a(href='/logout').title
-            h3 Log Out 
+          ul.navList
+            a(href='/create-message')
+              li.navlink Message
+            a(href='/member')
+              li.navlink Member
+            a(href='/admin') 
+              li.navlink Admin
+            a(href='/logout')
+              li.navlink Log Out 
         else 
-          a(href='/sign-up').title
-            h3 Sign Up
-          a(href='/login').title
-            h3 Login
+          ul.navList
+            a(href='/sign-up')
+              li.navlink Sign Up
+            a(href='/login')
+              li.navlink Login
     block content
