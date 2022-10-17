@@ -2,16 +2,13 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.scss')
-  body
-    .container 
-      nav.navbar 
+  body 
+    nav.navbar 
+      div.left-container
         a(href='/').title
-          h3 Homepage
-        a(href='/sign-up').title
-          h3 Sign Up
-        a(href='/login').title
-          h3 Login
-        
+          svg(width='30px', height='30px')
+            use(xlink:href='../images/home.svg#homeIcon')
+      div.right-container
         if locals.currentUser 
           a(href='/create-message').title
             h3 Message
@@ -20,5 +17,10 @@ html
           a(href='/admin').title  
             h3 Become an Admin
           a(href='/logout').title
-                h3 Log Out 
+            h3 Log Out 
+        else 
+          a(href='/sign-up').title
+            h3 Sign Up
+          a(href='/login').title
+            h3 Login
     block content
