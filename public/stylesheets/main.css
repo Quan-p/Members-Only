@@ -1,3 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 20px;
+  color: #d9d9d9;
+  background-color: #284B63;
+}
+
+a:visited, a:link, a:active {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+.left-container {
+  margin-left: 20px;
+  padding: 20px 0 20px 0;
+}
+.left-container svg {
+  fill: #d9d9d9;
+  transition: all 0.2s ease;
+}
+.left-container svg:hover {
+  fill: #FFFFFF;
+  transform: scale(1.1);
+}
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-container .navList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.right-container .navList li {
+  padding-right: 20px;
+  transition: all 0.2s ease;
+}
+.right-container .navList .navlink:hover {
+  color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
 .message-container {
   background-color: red;
 }

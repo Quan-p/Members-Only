@@ -1,0 +1,54 @@
+$hover-color: #FFFFFF;
+$text-color: #d9d9d9;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9; 
+  font-size: 20px;
+  color: $text-color;
+  background-color: #284B63;
+}
+
+a:visited, a:link, a:active {
+  text-decoration: none;
+  color: $text-color;
+}
+
+
+.left-container {
+  margin-left: 20px;
+  padding: 20px 0 20px 0;
+
+  svg {
+    fill: $text-color;
+    transition: all 0.2s ease;
+  }
+  
+  svg:hover {
+    fill: $hover-color;
+    transform: scale(1.1);
+  }
+}
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .navList {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  
+    li {
+      padding-right: 20px;
+      transition: all 0.2s ease;
+    }
+  
+    .navlink:hover {
+      color: $hover-color;
+    }
+  }
+}
+
