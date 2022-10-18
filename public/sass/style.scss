@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+//@import 'main.scss';
 
 * {
   box-sizing: border-box;
@@ -9,31 +10,32 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid gray; 
+  border-bottom: 1px solid #d9d9d9; 
   font-size: 20px;
-  color: #353535;
+  color: #d9d9d9;
+  background-color: #284B63;
 }
 
-a {
+li {
   transition: all 0.2s ease;
 }
 
 a:visited, a:link, a:active {
   text-decoration: none;
-  color: #353535;
+  color: #d9d9d9;
 }
 
 .navlink:hover {
-  color: grey;
+  color: #FFFFFF;
 }
 
 svg {
-  fill: purple;
+  fill: #d9d9d9;
   transition: all 0.2s ease;
 }
 
 svg:hover {
-  fill: grey;
+  fill: #FFFFFF;
   transform: scale(1.1);
 }
 
@@ -56,4 +58,5 @@ svg:hover {
 
 .navList li {
   padding: 0 10px 0 10px;
+  transition: all 0.2s ease;
 }
