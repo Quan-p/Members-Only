@@ -17,13 +17,25 @@ a:visited, a:link, a:active {
   margin-left: 20px;
   padding: 20px 0 20px 0;
 }
-.left-container svg {
-  fill: #d9d9d9;
+.left-container .navlink {
+  display: flex;
+  align-items: center;
   transition: all 0.2s ease;
 }
-.left-container svg:hover {
+.left-container .navlink .title {
+  transition: all 0.2s ease;
+}
+.left-container .navlink:hover {
+  color: #FFFFFF;
+}
+.left-container .navlink:hover svg {
   fill: #FFFFFF;
   transform: scale(1.1);
+}
+.left-container svg {
+  fill: #d9d9d9;
+  margin-right: 8px;
+  transition: all 0.2s ease;
 }
 
 .right-container {

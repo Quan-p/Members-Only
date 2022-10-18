@@ -20,14 +20,28 @@ a:visited, a:link, a:active {
   margin-left: 20px;
   padding: 20px 0 20px 0;
 
+  .navlink {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+
+    .title {
+      transition: all 0.2s ease;
+    }
+  }
+
+  .navlink:hover {
+    color: $hover-color;
+    svg {
+      fill: $hover-color;
+      transform: scale(1.1);
+    }
+  }
+
   svg {
     fill: $text-color;
+    margin-right: 8px;
     transition: all 0.2s ease;
-  }
-  
-  svg:hover {
-    fill: $hover-color;
-    transform: scale(1.1);
   }
 }
 

@@ -3,9 +3,9 @@ extends layout
 
 block content
   if locals.currentUser 
-    div Welcome #{user.username}
+    div.welcome-msg Welcome #{user.username}
   else 
-    p Become a member to see users and dates.
+    div.welcome-msg Become a member to see users and dates.
 
   if messages
     div.message-container 
