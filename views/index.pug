@@ -8,19 +8,20 @@ block content
     div.welcome-msg Become a member to see users and dates.
 
   if messages
-    div.message-container 
+    div.main-container 
       each message in messages
-        div= message.title
-        div= message.text
-        div= message._id
-        if user && user.member
-          h4= message.user.username
-          div= message.date_formatted
-        else 
-          h4 Anonymous 
-          div Date: N/A
-        if user && user.admin 
-          div.delete-form 
-            form(action='' method='POST')
-              input#messageId(type='hidden', name='messageId', required='true', value=message._id)
-              button(type='submit') DELETE MESSAGE
+        div.message-container
+          div= message.title
+          div= message.text
+          div= message._id
+          if user && user.member
+            h4= message.user.username
+            div= message.date_formatted
+          else 
+            h4 Anonymous 
+            div Date: N/A
+          if user && user.admin 
+            div.delete-form 
+              form(action='' method='POST')
+                input#messageId(type='hidden', name='messageId', required='true', value=message._id)
+                button(type='submit') DELETE MESSAGE

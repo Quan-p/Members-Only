@@ -1,0 +1,25 @@
+$text-color: #353535;
+
+.welcome-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    font-size: 22px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 25px;
+    width: 500px;
+    border-radius: 15px;
+    border: 1px solid 
+}
