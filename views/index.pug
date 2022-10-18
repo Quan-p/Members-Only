@@ -3,7 +3,8 @@ extends layout
 
 block content
   if locals.currentUser 
-    div.welcome-msg Welcome #{user.username}
+    div.welcome-msg Welcome&nbsp; 
+      p.username #{user.username}
   else 
     div.welcome-msg Become a member to see users and dates.
 
@@ -11,15 +12,16 @@ block content
     div.main-container 
       each message in messages
         div.message-container
-          div= message.title
-          div= message.text
-          div= message._id
+          h3.message-title= message.title
+          div.message-text= message.text
           if user && user.member
-            h4= message.user.username
-            div= message.date_formatted
+            div.sub-container
+              h4.message-user= message.user.username
+              div.message-date= message.date_formatted
           else 
-            h4 Anonymous 
-            div Date: N/A
+            div.sub-container
+              h4.message-user Anonymous 
+              div.message-date Date: N/A
           if user && user.admin 
             div.delete-form 
               form(action='' method='POST')
