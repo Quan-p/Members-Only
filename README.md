@@ -29,3 +29,7 @@ Members Only was an opportunity to develop authentication skills and to show uni
 - PassportJS used for authentication
 - User authorization and permissions management (Admin, member, and non-member but registered user).
 - Passwords are hashed and secured using bcryptjs
+
+## How To Be A Member
+
+Member Password is "membersonly"
