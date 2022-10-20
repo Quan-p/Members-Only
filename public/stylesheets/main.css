@@ -276,12 +276,14 @@ a:visited, a:link, a:active {
   width: 250px;
   border-radius: 5px;
   border: none;
+  font-size: 18px;
 }
 .message-form .input-container .text-input {
   width: 250px;
   height: 60px;
   border-radius: 5px;
   border: none;
+  font-size: 18px;
 }
 .message-form .submit-btn {
   padding: 10px 30px;
