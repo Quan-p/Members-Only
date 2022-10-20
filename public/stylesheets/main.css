@@ -106,6 +106,103 @@ a:visited, a:link, a:active {
   color: #FFFFFF;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  width: 850px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #3C6E71;
+  color: #d9d9d9;
+  border-radius: 15px;
+}
+.signup-form .form-title {
+  padding: 20px;
+}
+.signup-form .input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.signup-form .input-container .signup-input {
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+.signup-form .submit-btn {
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 15px;
+  font-size: 20px;
+  color: #353535;
+  cursor: pointer;
+}
+.signup-form .submit-btn:hover {
+  color: #d9d9d9;
+  background-color: #353535;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  width: 850px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #3C6E71;
+  color: #d9d9d9;
+  border-radius: 15px;
+}
+.login-form .form-title {
+  padding: 20px;
+}
+.login-form .input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.login-form .input-container .login-input {
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+.login-form .submit-btn {
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 15px;
+  font-size: 20px;
+  color: #353535;
+  cursor: pointer;
+}
+.login-form .submit-btn:hover {
+  color: #d9d9d9;
+  background-color: #353535;
+}
+.login-form .signup-link:hover {
+  color: #284B63;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

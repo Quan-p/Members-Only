@@ -1,19 +1,20 @@
 extends layout 
 
 block content 
-    form.signup-form(action='/sign-up' method='POST')
-        h1= title
-        div 
-            label(for='username') Username:
-            input#username.signup-input(type='text' name='username' required='true' maxLength='25')
-            if (error) 
-                p.error-message #{error}
-        div 
-            label(for='password') Password:
-            input#password.signup-input(type='password' name='password' required='true')
-        div 
-            label(for='confirmPassword') Confirm Password:
-            input#confirmPassword.signup-input(type='password' name='confirmPassword' required='true')
-        if (passwordCompareError) 
-                p.error-message #{passwordCompareError}
-        button(type='submit') Sign Up
+    div.form-container
+        form.signup-form(action='/sign-up' method='POST')
+            h1.form-title= title
+            div.input-container 
+                label(for='username') Username
+                input#username.signup-input(type='text' name='username' required='true' maxLength='25')
+                if (error) 
+                    p.error-message #{error}
+            div.input-container 
+                label(for='password') Password
+                input#password.signup-input(type='password' name='password' required='true')
+            div.input-container 
+                label(for='confirmPassword') Confirm Password
+                input#confirmPassword.signup-input(type='password' name='confirmPassword' required='true')
+            if (passwordCompareError) 
+                    p.error-message #{passwordCompareError}
+            button.submit-btn(type='submit') Sign Up
