@@ -1,15 +1,17 @@
 extends layout 
 
 block content 
-    form(action='/create-message' method='POST')
-        h1= title
-        div.title-container 
-            label(for='messageTitle') Title: 
-            input#messageTitle(type='text' name='messageTitle' required='true' maxLength='100')
-        div.text-container
-            label(for='textInput') Message: 
-            input#textInput(type='text' name='textInput' required='true')
-        button(type='submit') Post Message 
+    div.form-container
+        form.message-form(action='/create-message' method='POST')
+            h1.form-title= title
+            div.input-container 
+                label(for='messageTitle') Title 
+                input.title-input(type='text' name='messageTitle' required='true' maxLength='100')
+            div.input-container
+                label(for='textInput') Message
+                textarea.text-input(type='text' name='textInput' required='true')
+                    
+            button(type='submit').submit-btn Post Message 
 
-    if(errors) 
-        p #{errors}
+        if(errors) 
+            p #{errors}
