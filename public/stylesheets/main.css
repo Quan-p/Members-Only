@@ -203,8 +203,106 @@ a:visited, a:link, a:active {
   color: #284B63;
 }
 
+.confirm-msg {
+  color: #284B63;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.member-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  width: 650px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #3C6E71;
+  color: #d9d9d9;
+  border-radius: 15px;
+}
+.member-form .input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.member-form .input-container .auth-input {
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+.member-form .submit-btn {
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 15px;
+  font-size: 20px;
+  color: #353535;
+  cursor: pointer;
+}
+.member-form .submit-btn:hover {
+  color: #d9d9d9;
+  background-color: #353535;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  width: 650px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: #3C6E71;
+  color: #d9d9d9;
+  border-radius: 15px;
+}
+.message-form .form-title {
+  padding: 20px;
+}
+.message-form .input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.message-form .input-container .title-input {
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+.message-form .input-container .text-input {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+}
+.message-form .submit-btn {
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 15px;
+  font-size: 20px;
+  color: #353535;
+  cursor: pointer;
+}
+.message-form .submit-btn:hover {
+  color: #d9d9d9;
+  background-color: #353535;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: "Oswald", sans-serif;
+}
+
+label {
+  font-size: 20px;
 }
