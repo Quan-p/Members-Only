@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,7 +10,6 @@ const User = require('./models/userModel');
 const bcrypt = require("bcryptjs");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('dotenv').config();
 
 var indexRouter = require('./routes/routes');
  
