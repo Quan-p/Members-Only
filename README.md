@@ -4,7 +4,7 @@ This web app hosts an exclusive clubhouse where members can write anonymous post
 
 ## Live Demo
 
-https://members-only-qp.herokuapp.com/
+https://members-only-ybmy.onrender.com
 
 ## About the Project
 
