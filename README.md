@@ -1,6 +1,6 @@
 # Members Only Message Board
 
-This web app hosts an exclusive clubhouse where members can write anonymous posts.  Inside this clubhouse, members can see who the author of a post is, but outside they can only see the story and wonder who wrote it.  This web app is a photo tagging app where the user will try to find characters in an image and get feedback whether they were right or not.
+This web app hosts an exclusive clubhouse where members can write anonymous posts.  Inside this clubhouse, members can see who the author of a post is, but outside they can only see the story and wonder who wrote it.
 
 ## Live Demo
 
